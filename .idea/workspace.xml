@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5e98d74-f946-48d0-84cb-0d2de9d68c63" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/config/AppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/config/HexUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/importBean/MyFactoryBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/importBean/MyImportSelector.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Blue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Red.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Yellow.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/BinaryReadTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/BinaryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/FairTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/SerializableTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/test/SpringMain.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,7 +38,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinaryReadTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BinaryReadTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
@@ -62,15 +46,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -226,6 +201,11 @@
             <path>
               <item name="spring-test" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-test" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-test" type="b2602c69:ProjectViewProjectNode" />
@@ -442,12 +422,12 @@
       <workItem from="1617846348312" duration="5397000" />
       <workItem from="1617930984684" duration="416000" />
       <workItem from="1618208099472" duration="1202000" />
-      <workItem from="1618294787851" duration="2175000" />
+      <workItem from="1618294787851" duration="3143000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122641000" />
+    <option name="totallyTimeSpent" value="123609000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -818,6 +798,9 @@ d.setTime(1616652364929L);</expression-string>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -825,13 +808,6 @@ d.setTime(1616652364929L);</expression-string>
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
