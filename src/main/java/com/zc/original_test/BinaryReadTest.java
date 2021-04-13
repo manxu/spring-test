@@ -46,7 +46,8 @@ public class BinaryReadTest {
         DataInputStream in = new DataInputStream(new FileInputStream(file));
         System.out.println(in.available());
         int k = 0;
-        in.read(new byte[78922], 0 , 78922);
+        //可以通过consumeQueue中索引地址读取指定消息
+        //in.read(new byte[78922], 0 , 78922);
         while (true){
             int msgSize = in.readInt();
             System.out.println("msgSize" + msgSize);

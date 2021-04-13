@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e5e98d74-f946-48d0-84cb-0d2de9d68c63" name="Default" comment="" />
+    <list default="true" id="e5e98d74-f946-48d0-84cb-0d2de9d68c63" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/config/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/config/HexUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/importBean/MyFactoryBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/importBean/MyImportSelector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Blue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Red.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/model/Yellow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/BinaryReadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/BinaryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/FairTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/SerializableTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/original_test/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zc/test/SpringMain.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +54,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinaryReadTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BinaryReadTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="100">
+              <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -91,6 +119,9 @@
       <find>psm</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -113,6 +144,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zc/model/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/config/HexUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -125,8 +157,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/devolop/apache-maven-3.5.3" />
-        <option name="userSettingsFile" value="D:\devolop\apache-maven-3.5.3\conf\settings-shdy.xml" />
+        <option name="mavenHome" value="E:/developSoft/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="E:\developSoft\apache-maven-3.5.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -160,12 +192,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="spring-test" type="cbb8eebc:String" user="spring-test" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spring-test" type="58d84e3e:PackageViewProjectNode" />
+              <item name="spring-test" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="spring-test" type="58d84e3e:PackageViewProjectNode" />
+              <item name="spring-test" type="616d4139:PackageViewModuleNode" />
+              <item name="com.zc" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -217,23 +266,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="spring-test" type="58d84e3e:PackageViewProjectNode" />
-              <item name="spring-test" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="spring-test" type="58d84e3e:PackageViewProjectNode" />
-              <item name="spring-test" type="616d4139:PackageViewModuleNode" />
-              <item name="com.zc" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,7 +278,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -383,7 +415,7 @@
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\cango\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -410,11 +442,12 @@
       <workItem from="1617846348312" duration="5397000" />
       <workItem from="1617930984684" duration="416000" />
       <workItem from="1618208099472" duration="1202000" />
+      <workItem from="1618294787851" duration="2175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120466000" />
+    <option name="totallyTimeSpent" value="122641000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -426,7 +459,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3291592" />
@@ -434,15 +468,15 @@
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Maven Projects" order="8" weight="0.490161" />
+      <window_info anchor="bottom" id="Maven Projects" order="8" weight="0.48964012" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Run" order="9" weight="0.3291592" />
       <window_info anchor="bottom" id="Spring" order="4" weight="0.3291592" />
-      <window_info anchor="bottom" id="Terminal" order="5" weight="0.2647585" />
+      <window_info anchor="bottom" id="Terminal" order="5" visible="true" weight="0.26390404" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.43654" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.14285715" />
       <window_info anchor="right" id="Database" order="3" weight="0.32983023" />
       <window_info id="Structure" order="0" sideWeight="0.76386404" side_tool="true" weight="0.31123686" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
@@ -460,14 +494,14 @@
       <window_info anchor="bottom" id="Find" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.3291592" />
       <window_info anchor="bottom" id="Spring" order="4" weight="0.3291592" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.3291592" />
+      <window_info anchor="bottom" id="Find" order="7" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32983023" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" weight="0.32983023" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.2647585" />
@@ -477,18 +511,18 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3291592" />
       <window_info anchor="bottom" content_ui="combo" id="Hierarchy" order="14" sideWeight="0.5008944" weight="0.29516995" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.43654" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Maven Projects" order="8" weight="0.490161" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.43654" />
       <window_info anchor="right" id="Database" order="4" weight="0.32983023" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3291592" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Structure" order="0" sideWeight="0.76386404" side_tool="true" weight="0.31123686" />
-      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32983023" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.7817531" />
     </layout-to-restore>
   </component>
@@ -554,12 +588,6 @@
           <line>233</line>
           <properties />
           <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="103" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -646,16 +674,7 @@ d.setTime(1616652364929L);</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.6.RELEASE/spring-web-4.2.6.RELEASE.jar!/org/springframework/web/util/HierarchicalUriComponents.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/FileInputStream.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/SerializableTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -663,84 +682,18 @@ d.setTime(1616652364929L);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/OutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/util/BitSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13460">
-          <caret line="709" column="15" selection-start-line="709" selection-start-column="15" selection-end-line="709" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5440">
-          <caret line="302" column="27" selection-start-line="302" selection-start-column="27" selection-end-line="302" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReadWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="118" column="21" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/OutputStream.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/FileOutputStream.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/util/BitSet.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Integer.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReadWriteLock.java" />
     <entry file="file://$PROJECT_DIR$/java.util.concurrent.locks.ReentrantLock.class" />
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/Serializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2900">
-          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/Flushable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/Closeable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReentrantReadWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1640">
-          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReentrantLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3760">
-          <caret line="234" column="35" selection-start-line="234" selection-start-column="35" selection-end-line="234" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29200">
-          <caret line="1519" column="73" selection-start-line="1518" selection-start-column="8" selection-end-line="1519" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/Serializable.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/Flushable.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/Closeable.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReentrantReadWriteLock.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReentrantLock.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/FairTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -776,13 +729,7 @@ d.setTime(1616652364929L);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/StringCoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="179" column="56" lean-forward="true" selection-start-line="179" selection-start-column="46" selection-end-line="179" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/StringCoding.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/config/AppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
@@ -790,27 +737,9 @@ d.setTime(1616652364929L);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/devolop/java/jre/lib/rt.jar!/java/lang/NoSuchMethodError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/IncompatibleClassChangeError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/jre/lib/rt.jar!/java/lang/NoSuchMethodError.class" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/IncompatibleClassChangeError.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Exception.java" />
     <entry file="uml://JAVA/java.lang.Throwable">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -830,27 +759,9 @@ d.setTime(1616652364929L);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="113" column="22" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/LinkageError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Error.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Throwable.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/LinkageError.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/Error.java" />
     <entry file="uml://JAVA/java.lang.RuntimeException">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -873,28 +784,10 @@ d.setTime(1616652364929L);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/devolop/java/jre/lib/rt.jar!/java/lang/RuntimeException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/jre/lib/rt.jar!/java/lang/RuntimeException.class" />
     <entry file="file://$PROJECT_DIR$/sun.misc.Launcher$AppClassLoader.class" />
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/DataInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3320">
-          <caret line="189" column="9" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8940">
-          <caret line="488" column="11" selection-start-line="488" selection-start-column="11" selection-end-line="488" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/DataInput.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/lang/String.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/config/HexUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1180">
@@ -902,34 +795,10 @@ d.setTime(1616652364929L);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/InputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/FilterInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/DataInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4760">
-          <caret line="263" column="22" selection-start-line="263" selection-start-column="22" selection-end-line="263" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/devolop/java/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="165" column="37" selection-start-line="165" selection-start-column="37" selection-end-line="165" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/InputStream.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/FilterInputStream.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/io/DataInputStream.java" />
+    <entry file="jar://D:/devolop/java/src.zip!/java/util/ArrayList.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE.jar!/org/springframework/beans/factory/config/BeanPostProcessor.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -937,79 +806,32 @@ d.setTime(1616652364929L);</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessorAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="75" column="49" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="110" column="9" selection-start-line="110" selection-start-column="9" selection-end-line="110" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/AutowireCapableBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="116" column="76" lean-forward="true" selection-start-line="116" selection-start-column="76" selection-end-line="116" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/SingletonBeanRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/HierarchicalBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3951">
-          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/InstantiationAwareBeanPostProcessorAdapter.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/AutowireCapableBeanFactory.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/SingletonBeanRegistry.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/HierarchicalBeanFactory.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="101" column="2" lean-forward="true" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/ConfigurableBeanFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="49" column="65" lean-forward="true" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/config/ConfigurableBeanFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        <state relative-caret-position="100">
+          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
