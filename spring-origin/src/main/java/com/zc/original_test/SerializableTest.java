@@ -1,12 +1,12 @@
 package com.zc.original_test;
 
-import com.zc.model.Red;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
+import com.zc.model.Red;
 
 /**
  * @Date 2021/3/26 17:09

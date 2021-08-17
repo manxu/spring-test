@@ -1,7 +1,8 @@
 package com.zc.importBean;
 
-import com.zc.model.Yellow;
 import org.springframework.beans.factory.FactoryBean;
+
+import com.zc.model.Yellow;
 
 /**
  * @Date 2021/3/17 14:27

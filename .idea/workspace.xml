@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e5e98d74-f946-48d0-84cb-0d2de9d68c63" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/config/HexUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/importBean/MyFactoryBean.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/importBean/MyImportSelector.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/model/Blue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/model/Red.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/model/Yellow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/original_test/FairTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/original_test/SerializableTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/original_test/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zc/test/SpringMain.java" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,22 +50,6 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="spring-test" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BinaryReadTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -97,6 +96,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -110,7 +117,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zc/test/FairTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/test/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/OriginalTest/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zc/original_test/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/original_test/SerializableTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/model/RedRe.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/model/Red.java" />
@@ -120,6 +126,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zc/config/HexUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zc/original_test/Test.java" />
       </list>
     </option>
   </component>
@@ -132,14 +139,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="E:/developSoft/apache-maven-3.5.3" />
-        <option name="userSettingsFile" value="E:\developSoft\apache-maven-3.5.3\conf\settings.xml" />
+        <option name="mavenHome" value="E:\developSoft\apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="E:\developSoft\apache-maven-3.5.3\conf\settings-cango.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -156,29 +158,21 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="6" />
     <option name="y" value="12" />
     <option name="width" value="1260" />
     <option name="height" value="621" />
+  </component>
+  <component name="ProjectId" id="1rQVUCVAoB85l9CcuG1yZF55MXm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="spring-test" type="cbb8eebc:String" user="spring-test" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -246,73 +240,69 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="spring-test" type="cbb8eebc:String" user="spring-test" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/ideaWorkspace/spring-test/src/main/java/com/zc/config/HexUtil.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pos" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ideaWorkspace\spring-test\src\main" />
+      <recent name="E:\ideaWorkspace\spring-test\springboot-test\src\main\resources" />
+      <recent name="E:\ideaWorkspace\spring-test\springboot-test\src\main\resources\static" />
+      <recent name="E:\ideaWorkspace\spring-test\springboot-test\src\main\resources\public" />
+      <recent name="E:\ideaWorkspace\spring-test\springboot-test\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ideaWorkspace\spring-test\springboot-test\src\main\webapp\WEB-INF\jsp" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zc.original_test" />
       <recent name="com.zc.model" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean  --errors" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.BinaryReadTest">
-    <configuration name="BinaryReadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zc.original_test.BinaryReadTest" />
-      <module name="spring-test" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zc.original_test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="BinaryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zc.original_test.BinaryTest" />
-      <module name="spring-test" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zc.original_test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="SerializableTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zc.original_test.SerializableTest" />
-      <module name="spring-test" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zc.original_test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="SpringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zc.test.SpringMain" />
+  <component name="RunManager" selected="Spring Boot.MyApplication">
+    <configuration name="C1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zc.test.C1" />
       <module name="spring-test" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -321,10 +311,41 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="Test (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="ReferenceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zc.original_test.ReferenceTest" />
+      <module name="spring-origin" />
+      <option name="VM_PARAMETERS" value="-XX:+TraceClassLoading -XX:+TraceClassUnloading" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zc.original_test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zc.test.SpringMain" />
+      <module name="spring-origin" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zc.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zc.original_test.Test" />
-      <module name="spring-test" />
+      <module name="spring-origin" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -332,65 +353,80 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
       </option>
-      <patterns />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springboot-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zc.MyApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test (1)" />
-      <item itemvalue="Application.SerializableTest" />
-      <item itemvalue="Application.BinaryTest" />
+      <item itemvalue="Application.C1" />
       <item itemvalue="Application.SpringMain" />
-      <item itemvalue="Application.BinaryReadTest" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.ReferenceTest" />
+      <item itemvalue="Spring Boot.MyApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BinaryReadTest" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ReferenceTest" />
         <item itemvalue="Application.SpringMain" />
-        <item itemvalue="Application.BinaryTest" />
-        <item itemvalue="Application.SerializableTest" />
-        <item itemvalue="Application.Test (1)" />
+        <item itemvalue="Application.C1" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
@@ -422,12 +458,77 @@
       <workItem from="1617846348312" duration="5397000" />
       <workItem from="1617930984684" duration="416000" />
       <workItem from="1618208099472" duration="1202000" />
-      <workItem from="1618294787851" duration="3143000" />
+      <workItem from="1618294787851" duration="5363000" />
+      <workItem from="1618362628638" duration="598000" />
+      <workItem from="1618367013891" duration="592000" />
+      <workItem from="1618370251224" duration="598000" />
+      <workItem from="1618565253990" duration="2653000" />
+      <workItem from="1618795351747" duration="1198000" />
+      <workItem from="1618908315035" duration="465000" />
+      <workItem from="1619406765895" duration="4253000" />
+      <workItem from="1619486048193" duration="1741000" />
+      <workItem from="1620641559911" duration="2186000" />
+      <workItem from="1620695286322" duration="5696000" />
+      <workItem from="1620715123639" duration="7632000" />
+      <workItem from="1620781518189" duration="2921000" />
+      <workItem from="1620957949086" duration="1541000" />
+      <workItem from="1621218969371" duration="2402000" />
+      <workItem from="1621477785796" duration="14863000" />
+      <workItem from="1621559334425" duration="1241000" />
+      <workItem from="1621567426105" duration="35000" />
+      <workItem from="1621575832237" duration="3201000" />
+      <workItem from="1621818436296" duration="694000" />
+      <workItem from="1621820233996" duration="91000" />
+      <workItem from="1622084079101" duration="3025000" />
+      <workItem from="1622164285421" duration="4119000" />
+      <workItem from="1622423496826" duration="1188000" />
+      <workItem from="1622509509928" duration="944000" />
+      <workItem from="1622539965875" duration="603000" />
+      <workItem from="1622597390223" duration="2179000" />
+      <workItem from="1622682788245" duration="4405000" />
+      <workItem from="1622769057429" duration="1197000" />
+      <workItem from="1623027768572" duration="3415000" />
+      <workItem from="1623115416959" duration="1923000" />
+      <workItem from="1623200388008" duration="596000" />
+      <workItem from="1623287615590" duration="4662000" />
+      <workItem from="1623375023386" duration="2995000" />
+      <workItem from="1623718943252" duration="1300000" />
+      <workItem from="1623810930610" duration="1419000" />
+      <workItem from="1623896199151" duration="1206000" />
+      <workItem from="1623979579856" duration="1205000" />
+      <workItem from="1624067437356" duration="1780000" />
+      <workItem from="1624237305733" duration="1197000" />
+      <workItem from="1624325171504" duration="1183000" />
+      <workItem from="1624342998372" duration="3487000" />
+      <workItem from="1624410834515" duration="599000" />
+      <workItem from="1624498529120" duration="591000" />
+      <workItem from="1624583599350" duration="597000" />
+      <workItem from="1624843758652" duration="598000" />
+      <workItem from="1624930421135" duration="599000" />
+      <workItem from="1625015943214" duration="597000" />
+      <workItem from="1625116011398" duration="1488000" />
+      <workItem from="1625188533112" duration="595000" />
+      <workItem from="1625220616205" duration="593000" />
+      <workItem from="1625447975620" duration="47000" />
+      <workItem from="1625622145347" duration="4126000" />
+      <workItem from="1625706979411" duration="4052000" />
+      <workItem from="1625794210321" duration="596000" />
+      <workItem from="1626053751361" duration="596000" />
+      <workItem from="1626949930220" duration="1126000" />
+      <workItem from="1627003968230" duration="3053000" />
+      <workItem from="1627265205362" duration="1212000" />
+      <workItem from="1627348708129" duration="598000" />
+      <workItem from="1627443069023" duration="1006000" />
+      <workItem from="1627453917373" duration="2999000" />
+      <workItem from="1628219488528" duration="6833000" />
+      <workItem from="1628477429088" duration="1758000" />
+      <workItem from="1629163884781" duration="1537000" />
+      <workItem from="1629171608937" duration="7777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123609000" />
+    <option name="totallyTimeSpent" value="131468000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -439,8 +540,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3291592" />
@@ -448,40 +548,40 @@
       <window_info id="Image Layers" order="1" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Maven Projects" order="8" weight="0.48964012" />
+      <window_info anchor="bottom" id="Maven Projects" order="8" weight="0.25736097" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.3291592" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.32824427" />
       <window_info anchor="bottom" id="Spring" order="4" weight="0.3291592" />
-      <window_info anchor="bottom" id="Terminal" order="5" visible="true" weight="0.26390404" />
+      <window_info anchor="bottom" id="Terminal" order="5" weight="0.35223556" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.14285715" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.063432835" />
       <window_info anchor="right" id="Database" order="3" weight="0.32983023" />
       <window_info id="Structure" order="0" sideWeight="0.76386404" side_tool="true" weight="0.31123686" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" weight="0.32983023" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.33273703" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.33260632" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3291592" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32983023" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.3291592" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" content_ui="combo" id="Hierarchy" order="14" sideWeight="0.5008944" weight="0.29516995" />
       <window_info anchor="bottom" id="Find" order="7" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info id="Designer" order="3" />
       <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.3291592" />
       <window_info anchor="bottom" id="Spring" order="4" weight="0.3291592" />
       <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.3291592" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32983023" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" weight="0.32983023" />
       <window_info anchor="bottom" id="Terminal" order="5" weight="0.2647585" />
@@ -491,90 +591,44 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3291592" />
       <window_info anchor="bottom" content_ui="combo" id="Hierarchy" order="14" sideWeight="0.5008944" weight="0.29516995" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.43654" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Maven Projects" order="8" weight="0.490161" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.23613596" visible="true" weight="0.43654" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" weight="0.32983023" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3291592" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Structure" order="0" sideWeight="0.76386404" side_tool="true" weight="0.31123686" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32983023" />
+      <window_info anchor="bottom" id="Find" order="7" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.7817531" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE.jar!/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.class</url>
-          <line>813</line>
-          <properties />
-          <option name="timeStamp" value="13" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-origin/src/main/java/com/zc/test/SpringMain.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java</url>
-          <line>653</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.6.RELEASE/spring-beans-4.2.6.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java</url>
-          <line>596</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.6.RELEASE/spring-context-4.2.6.RELEASE-sources.jar!/org/springframework/scheduling/annotation/ScheduledAnnotationBeanPostProcessor.java</url>
-          <line>271</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://D:/devolop/java/src.zip!/java/util/concurrent/ThreadPoolExecutor.java</url>
-          <line>1710</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReentrantLock.java</url>
-          <line>364</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReentrantLock.java</url>
-          <line>223</line>
-          <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zc/original_test/FairTest.java</url>
-          <line>36</line>
-          <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>jar://D:/devolop/java/src.zip!/java/util/concurrent/locks/ReentrantLock.java</url>
-          <line>233</line>
-          <properties />
-          <option name="timeStamp" value="64" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springboot-test/src/main/java/com/zc/controller/UserController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="104" />
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.boot.SpringApplicationRunListeners" memberName="log" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="clazz.getName()" language="JAVA" />
@@ -654,7 +708,6 @@ d.setTime(1616652364929L);</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/devolop/java/src.zip!/java/io/FileInputStream.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/SerializableTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -801,10 +854,17 @@ d.setTime(1616652364929L);</expression-string>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zc/original_test/BinaryReadTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        <state relative-caret-position="213">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

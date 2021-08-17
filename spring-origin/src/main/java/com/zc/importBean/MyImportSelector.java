@@ -1,8 +1,9 @@
 package com.zc.importBean;
 
-import com.zc.model.Blue;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
+
+import com.zc.model.Blue;
 
 /**
  * @Date 2021/3/17 14:18

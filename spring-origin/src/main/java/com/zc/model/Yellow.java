@@ -5,6 +5,7 @@ package com.zc.model;
  * @Author zc
  */
 public class Yellow {
+    public int c;
     public void aa(){
         System.out.println("yellow aa");
     }

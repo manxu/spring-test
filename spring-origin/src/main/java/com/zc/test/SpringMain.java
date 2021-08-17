@@ -1,22 +1,11 @@
 package com.zc.test;
 
-import com.zc.config.AppConfig;
-import com.zc.importBean.MyFactoryBean;
-import com.zc.model.Person;
-import com.zc.model.Red;
-import com.zc.model.Yellow;
-import org.springframework.beans.factory.config.BeanDefinition;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.lang.instrument.Instrumentation;
-import java.util.Arrays;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.ReentrantLock;
+import com.zc.config.AppConfig;
+import com.zc.model.Red;
 
 /**
  * @Date 2021/3/16 9:47

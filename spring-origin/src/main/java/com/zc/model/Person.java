@@ -1,9 +1,6 @@
 package com.zc.model;
 
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.scheduling.annotation.Scheduled;
 
 /**
  * @Date 2021/3/16 9:51
