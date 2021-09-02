@@ -39,6 +39,25 @@
                 }
             });
         }
+        function qr(){
+            $.ajax({
+                url : $('#formQr').attr('action'),
+                type : 'POST',
+                cache : false,
+                data : new FormData($('#formQr')[0]),
+                processData : false,
+                contentType : false,
+                success : function(result) {
+                    // do something
+                }
+            });
+        }
+
+        function init(){
+            $.getJSON('/init',{},function (data){
+                alert(data);
+            });
+        }
     </script>
 
 </head>
@@ -48,5 +67,9 @@
 <form id="form" autocomplete="off" class="form-horizontal" role="form"  action="upload" enctype="multipart/form-data">
 导入数据： <input type="file" name="file"><input type="button" value="提交" onclick="upload()"/>
 </form>
+<form id="formQr" autocomplete="off" class="form-horizontal" role="form"  action="qr" enctype="multipart/form-data">
+    qr： <input type="file" name="file"><input type="button" value="提交" onclick="qr()"/>
+</form>
+<button type="button" onclick="init()">初始化用户</button>
 </body>
 </html>

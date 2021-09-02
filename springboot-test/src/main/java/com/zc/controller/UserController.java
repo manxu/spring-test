@@ -1,11 +1,19 @@
 package com.zc.controller;
 
 import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -146,5 +154,61 @@ public class UserController {
         }
         return res;
     }
+
+
+    //生成qr
+    @RequestMapping("/qr")
+    @ResponseBody
+    public Object qr(@RequestParam MultipartFile file){
+        try {
+            JSONArray a = new JSONArray();
+            InputStream in = file.getInputStream();
+            InputStreamReader reader = new InputStreamReader(in);
+            LineNumberReader reader1 = new LineNumberReader(reader);
+            String s ;
+            while((s =reader1.readLine())!=null){
+                JSONObject o = new JSONObject();
+                o.put("userId", s);
+                o.put("elmqr", "mm_12_12_12");
+                a.add(o);
+            }
+            in.close();
+            return a;
+        } catch (Exception e) {
+            logger.error("", e);
+        }
+        return null;
+    }
+
+    //初始化
+    @RequestMapping("/init")
+    @ResponseBody
+    public Object init(){
+        try {
+            Map<String,Object> param =  new MapUtil()
+                    .com("env", HttpUtil.getKey("env"))
+                    .com("query", "db.collection('m_user').where({}).get()")
+                    .map;
+            String s = HttpUtil.sendPost(HttpUtil.UPDATE, param);
+            JSONObject res = JSONObject.parseObject(s);
+            JSONArray users = (JSONArray) res.get("data");
+            users.stream().forEach(e->{
+                JSONObject user = (JSONObject)e;
+                String openid = user.getString("_openid");
+                logger.info(openid);
+                param.put("query", "db.collection('m_qrs').doc('').update({data:{qrs:_.shift()}})");
+                String uparam = HttpUtil.sendPost(HttpUtil.QUERY, param);
+                param.put("query", "db.collection('m_user').where({_openid:'"+openid+"'}).update({data:"+ uparam +"})");
+                String ures = HttpUtil.sendPost(HttpUtil.QUERY, param);
+                logger.info(ures);
+            });
+            return s;
+        } catch (Exception e) {
+            logger.error("", e);
+        }
+        return "";
+    }
+
+
 
 }

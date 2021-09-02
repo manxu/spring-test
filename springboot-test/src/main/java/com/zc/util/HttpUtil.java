@@ -35,7 +35,7 @@ public class HttpUtil {
     }
 
     public static Properties getProperties() {
-        try {
+        /*try {
             InputStream in = new FileInputStream("E:/local.properties");
             Properties p = new Properties();
             p.load(in);
@@ -47,7 +47,7 @@ public class HttpUtil {
             return p;
         } catch (Exception e) {
             logger.error("", e);
-        }
+        }*/
         return null;
 
     }
