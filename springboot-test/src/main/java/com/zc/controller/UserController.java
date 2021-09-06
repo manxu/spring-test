@@ -21,6 +21,7 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,6 +36,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zc.dao.UserDao;
+import com.zc.service.UserService;
 import com.zc.util.HttpUtil;
 import com.zc.util.MapUtil;
 
@@ -42,7 +44,7 @@ import com.zc.util.MapUtil;
 public class UserController {
     private static Logger logger = LoggerFactory.getLogger(UserController.class);
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
     @RequestMapping("/index")
     public String index(){
@@ -103,65 +105,20 @@ public class UserController {
         BufferedInputStream is = null;
         List<Map<String,Object>> results = new ArrayList<>();
         try {
-            is = new BufferedInputStream(
-                    file.getInputStream());
-            Workbook workbook = new XSSFWorkbook(is);
+            Workbook workbook = WorkbookFactory.create(file.getInputStream());
             Sheet sheet = workbook.getSheetAt(0);
             int rows = sheet.getPhysicalNumberOfRows();
 
             //读第一个sheet
             for (int i = 1;i<rows;i++){
                 Row row = sheet.getRow(i);
-                String noTime = row.getCell(2).getStringCellValue() ;
-                String no = row.getCell(10).getStringCellValue() ;
-                String userId = row.getCell(10).getStringCellValue();
-                double amount = row.getCell(12).getNumericCellValue();
-                String fl = new BigDecimal(amount).multiply(new BigDecimal("3")).setScale(0, RoundingMode.DOWN).toPlainString();
-                Map<String,Object> result = new MapUtil().com("no", no).com("userId", userId).com("amount", amount+"")
-                        .map;
-                results.add(result);
-                //查询
-                String queryOrder = "db.collection('m_order').where({userId:'"+userId+"',no:'"+ no +"'}).get()";
-                Map<String,Object> param =  new MapUtil()
-                        .com("env", HttpUtil.getKey("env"))
-                        .com("query", queryOrder)
-                        .map;
-                String order = HttpUtil.sendPost(HttpUtil.QUERY, param);
-                JSONObject orderJson = JSONObject.parseObject(order);
-                final int exist = orderJson.getJSONArray("data").size();
-                if(exist>0){
-                    result.put("code", "-2");
-                    result.put("msg","已存在");
-                    continue;
-                }
-
-                String addOrder = "db.collection('m_order').add({" +
-                        "no:'"+ no +"', " +
-                        "amount:"+amount+"," +
-                        "fl:"+ fl +"," +
-                        "userId:'"+ userId +"', " +
-                        "noTime:'"+ noTime +"', " +
-                        "})";
-                Map<String,Object> inparam =  new MapUtil()
-                        .com("env", HttpUtil.getKey("env"))
-                        .com("query", addOrder)
-                        .map;
-                result.put("code", "0");
-                result.put("msg","新增");
-                result.put("fl", fl);
-                String inOrder = HttpUtil.sendPost(HttpUtil.ADD, inparam);
-                JSONObject inOrderJson = JSONObject.parseObject(inOrder);
-                if(inOrderJson.get("code").equals("0")){
-                    String userUpdate = "db.collection('m_user').where({userId:'"+userId+"'}).update({data:{yue:_.inc("+fl+"), zuori:_.inc("+fl+")}})";
-                    String updateUserResult = HttpUtil.sendPost(HttpUtil.UPDATE, userUpdate);
-                    JSONObject updateUserResultJson = JSONObject.parseObject(updateUserResult);
-                    if(updateUserResultJson.get("code").equals("0")){
-                        result.put("code", "1");
-                        result.put("msg","更新user");
-                    }
-                }
+                String noTime = row.getCell(3).getStringCellValue() ;
+                String no = row.getCell(13).getStringCellValue() ;
+                String userId = "mm_31111125_"+row.getCell(33).getStringCellValue()+"_"+row.getCell(35).getStringCellValue();
+                String amount = row.getCell(18).getStringCellValue();
+                results.add(userService.handlerOrder(userId,no,amount,noTime));
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             logger.error("", e);
         }finally {
             is = null;

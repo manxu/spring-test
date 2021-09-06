@@ -7,7 +7,8 @@
     <list default="true" id="e5e98d74-f946-48d0-84cb-0d2de9d68c63" name="Default" comment="git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springboot-test/src/main/java/com/zc/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-test/src/main/java/com/zc/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-test/src/main/java/com/zc/util/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-test/src/main/java/com/zc/util/HttpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-test/src/main/java/com/zc/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-test/src/main/java/com/zc/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-test/src/main/webapp/WEB-INF/jsp/upload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-test/src/main/webapp/WEB-INF/jsp/upload.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -256,6 +258,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/ideaWorkspace/spring-test/src/main/java/com/zc/config/HexUtil.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -367,13 +370,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -540,7 +545,8 @@
       <workItem from="1630545295099" duration="11981000" />
       <workItem from="1630632577272" duration="592000" />
       <workItem from="1630890836863" duration="200000" />
-      <workItem from="1630891114426" duration="5265000" />
+      <workItem from="1630891114426" duration="5425000" />
+      <workItem from="1630915070405" duration="4078000" />
     </task>
     <task id="LOCAL-00001" summary="git">
       <created>1629192421284</created>
@@ -570,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630562363671</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="git">
+      <created>1630914393087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630914393087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -679,6 +692,20 @@
           <line>32</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springboot-test/src/main/java/com/zc/service/UserService.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springboot-test/src/main/java/com/zc/service/UserService.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="java.io.EOFException" package="java.io" />
+          <option name="timeStamp" value="88" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

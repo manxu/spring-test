@@ -28,7 +28,7 @@
     <script type="text/javascript">
         function upload(){
             $.ajax({
-                url : form.attr('action'),
+                url : $('#form').attr('action'),
                 type : 'POST',
                 cache : false,
                 data : new FormData($('#form')[0]),
