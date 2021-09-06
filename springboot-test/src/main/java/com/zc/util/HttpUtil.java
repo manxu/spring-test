@@ -29,13 +29,14 @@ public class HttpUtil {
 
     public static String QUERY = "https://api.weixin.qq.com/tcb/databasequery?access_token=" + HttpUtil.token;
     public static String UPDATE = "https://api.weixin.qq.com/tcb/databaseupdate?access_token=" + HttpUtil.token;
+    public static String ADD = "https://api.weixin.qq.com/tcb/databaseadd?access_token=" + HttpUtil.token;
 
     public static String getKey(String key){
         return pts.getProperty(key);
     }
 
     public static Properties getProperties() {
-        /*try {
+        try {
             InputStream in = new FileInputStream("E:/local.properties");
             Properties p = new Properties();
             p.load(in);
@@ -47,13 +48,19 @@ public class HttpUtil {
             return p;
         } catch (Exception e) {
             logger.error("", e);
-        }*/
+        }
         return null;
 
     }
 
 
-
+    public static String sendPost(String url, String query) {
+        Map<String,Object> userparam =  new MapUtil()
+                .com("env", HttpUtil.getKey("env"))
+                .com("query", query)
+                .map;
+        return sendPost(url, userparam);
+    }
 
     public static String sendPost(String url, Map<String, Object> param) {
         CloseableHttpClient httpclient = HttpClients.createDefault();

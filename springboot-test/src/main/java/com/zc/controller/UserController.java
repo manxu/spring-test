@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.RandomAccessFile;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -99,66 +101,79 @@ public class UserController {
     @ResponseBody
     public Object upload(@RequestParam MultipartFile file){
         BufferedInputStream is = null;
-        List<Map<String,Object>> res = new ArrayList<>();
+        List<Map<String,Object>> results = new ArrayList<>();
         try {
             is = new BufferedInputStream(
                     file.getInputStream());
             Workbook workbook = new XSSFWorkbook(is);
             Sheet sheet = workbook.getSheetAt(0);
             int rows = sheet.getPhysicalNumberOfRows();
+
             //读第一个sheet
             for (int i = 1;i<rows;i++){
                 Row row = sheet.getRow(i);
-                String no = row.getCell(10).getStringCellValue();
-                String amount = row.getCell(12).getStringCellValue();
-
+                String noTime = row.getCell(2).getStringCellValue() ;
+                String no = row.getCell(10).getStringCellValue() ;
+                String userId = row.getCell(10).getStringCellValue();
+                double amount = row.getCell(12).getNumericCellValue();
+                String fl = new BigDecimal(amount).multiply(new BigDecimal("3")).setScale(0, RoundingMode.DOWN).toPlainString();
+                Map<String,Object> result = new MapUtil().com("no", no).com("userId", userId).com("amount", amount+"")
+                        .map;
+                results.add(result);
                 //查询
-                String query = "db.collection(\"m_order\").aggregate()." +
-                        "lookup({" +
-                        "from:'m_user'," +
-                        "localField:'_openid'," +
-                        "foreignField:'_openid'," +
-                        "as:'user'" +
-                        "}).where({no:'"+ no +"'}).get()";
+                String queryOrder = "db.collection('m_order').where({userId:'"+userId+"',no:'"+ no +"'}).get()";
                 Map<String,Object> param =  new MapUtil()
                         .com("env", HttpUtil.getKey("env"))
-                        .com("query", query)
+                        .com("query", queryOrder)
                         .map;
-                String cq = HttpUtil.sendPost(HttpUtil.QUERY, param);
-                JSONObject cqjson = JSONObject.parseObject(cq);
-                for(int j=0;j< cqjson.getJSONArray("data").size();j++){
-                    JSONObject c = cqjson.getJSONArray("data").getJSONObject(j);
-                    if(c.get("fl")!=null){
-                        res.add(new MapUtil().com("no", no).com("amount", c.getString("amount")).com("fl", c.getString("fl"))
-                                .com("flflag","已返利").map);
-                    }else{
-
-                        /*Map<String,Object> be = new MapUtil().com("no", no).com("amount",  "").
-                                com("fl",  "")).map;*/
-                        //be.put()
-
-
-
-                    }
+                String order = HttpUtil.sendPost(HttpUtil.QUERY, param);
+                JSONObject orderJson = JSONObject.parseObject(order);
+                final int exist = orderJson.getJSONArray("data").size();
+                if(exist>0){
+                    result.put("code", "-2");
+                    result.put("msg","已存在");
+                    continue;
                 }
 
-
-
-
-
+                String addOrder = "db.collection('m_order').add({" +
+                        "no:'"+ no +"', " +
+                        "amount:"+amount+"," +
+                        "fl:"+ fl +"," +
+                        "userId:'"+ userId +"', " +
+                        "noTime:'"+ noTime +"', " +
+                        "})";
+                Map<String,Object> inparam =  new MapUtil()
+                        .com("env", HttpUtil.getKey("env"))
+                        .com("query", addOrder)
+                        .map;
+                result.put("code", "0");
+                result.put("msg","新增");
+                result.put("fl", fl);
+                String inOrder = HttpUtil.sendPost(HttpUtil.ADD, inparam);
+                JSONObject inOrderJson = JSONObject.parseObject(inOrder);
+                if(inOrderJson.get("code").equals("0")){
+                    String userUpdate = "db.collection('m_user').where({userId:'"+userId+"'}).update({data:{yue:_.inc("+fl+"), zuori:_.inc("+fl+")}})";
+                    String updateUserResult = HttpUtil.sendPost(HttpUtil.UPDATE, userUpdate);
+                    JSONObject updateUserResultJson = JSONObject.parseObject(updateUserResult);
+                    if(updateUserResultJson.get("code").equals("0")){
+                        result.put("code", "1");
+                        result.put("msg","更新user");
+                    }
+                }
             }
         } catch (IOException e) {
             logger.error("", e);
         }finally {
             is = null;
         }
-        return res;
+        return results;
     }
 
 
     //生成qr
     @RequestMapping("/qr")
     @ResponseBody
+    @Deprecated
     public Object qr(@RequestParam MultipartFile file){
         try {
             JSONArray a = new JSONArray();
@@ -181,6 +196,7 @@ public class UserController {
     }
 
     //初始化
+    @Deprecated
     @RequestMapping("/init")
     @ResponseBody
     public Object init(){
@@ -209,6 +225,13 @@ public class UserController {
         return "";
     }
 
+    public static void main(String[] args) {
+        Map<String,Object> param =  new MapUtil()
+                .com("env", HttpUtil.getKey("env"))
+                .com("query", "cloud.callFunction('userlian').data({}).get()")
+                .map;
+        String s = HttpUtil.sendPost(HttpUtil.UPDATE, param);
+    }
 
 
 }
