@@ -48,6 +48,7 @@
                             var id  = $(this).attr("id");
                             var x = JSON.parse(xx[id]);
                             $('#detail').html("");
+                            $('#detail').append('<input type="button" value="删除" onclick="del(this)">');
                             for(var s in x){
                                 var type = typeof x[s] == 'number' ? 1 : 0;
                                 var value = ((typeof x[s] == 'object' ? JSON.stringify(x[s]) : x[s]));
@@ -76,6 +77,19 @@
 
 
         });
+        function del(i){
+            var inp = $(i).next().next();
+            $.ajax({
+                type:'POST',
+                url:'delete',
+                dataType:'json',
+                data:{'table':inp.attr('data_table'),'para':'{"_id":"'+ inp.attr('data_id') +'"}'},
+                success:function(res){
+                    alert(res.errcode + ":" + res.errmsg)
+                }
+            });
+
+        }
     </script>
 
 </head>

@@ -34,8 +34,10 @@
                 data : new FormData($('#form')[0]),
                 processData : false,
                 contentType : false,
-                success : function(result) {
-                    // do something
+                success : function(data) {
+                    for(var i in data){
+                        $("#imdiv").append(JSON.stringify(data[i]));
+                    }
                 }
             });
         }
@@ -49,6 +51,19 @@
                 contentType : false,
                 success : function(result) {
                     // do something
+                }
+            });
+        }
+        function addOrder(){
+            $.ajax({
+                url : $('#addOrder').attr('action'),
+                type : 'POST',
+                cache : false,
+                data : new FormData($('#addOrder')[0]),
+                processData : false,
+                contentType : false,
+                success : function(result) {
+                    $('#addOrderDiv').append(JSON.stringify(result));
                 }
             });
         }
@@ -67,9 +82,35 @@
 <form id="form" autocomplete="off" class="form-horizontal" role="form"  action="upload" enctype="multipart/form-data">
 导入数据： <input type="file" name="file"><input type="button" value="提交" onclick="upload()"/>
 </form>
+<div> 导入结果
+    <ul id ="imdiv">
+
+    </ul>
+</div>
+
+<hr />
+
+<div>
+    手动
+    <form id="addOrder" autocomplete="off" class="form-horizontal" role="form"  action="addOrder" enctype="application/x-www-form-urlencoded">
+        no:<input type="text" name="no"><br>
+        userId:<input type="text" name="userId"><br>
+        amount:<input type="text" name="amount"><br>
+        <input type="button" value="提交" onclick="addOrder()"/>
+        <div> 导入结果
+            <ul id ="addOrderDiv">
+
+            </ul>
+        </div>
+    </form>
+</div>
+
+<hr />
 <form id="formQr" autocomplete="off" class="form-horizontal" role="form"  action="qr" enctype="multipart/form-data">
     qr： <input type="file" name="file"><input type="button" value="提交" onclick="qr()"/>
 </form>
+
+<hr />
 <button type="button" onclick="init()">初始化用户</button>
 </body>
 </html>
