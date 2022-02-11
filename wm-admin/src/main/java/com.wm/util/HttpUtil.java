@@ -1,13 +1,7 @@
-package com.zc.util;
+package com.wm.util;
 
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Properties;
-
+import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -19,7 +13,11 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.alibaba.fastjson.JSONObject;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Map;
+import java.util.Properties;
 
 public class HttpUtil {
     private static Logger logger = LoggerFactory.getLogger(HttpUtil.class);
@@ -32,7 +30,7 @@ public class HttpUtil {
     public static String ADD = "https://api.weixin.qq.com/tcb/databaseadd?access_token=" + HttpUtil.token;
     public static String DEL = "https://api.weixin.qq.com/tcb/databasedelete?access_token=" + HttpUtil.token;
 
-    public static String getKey(String key){
+    public static String getKey(String key) {
         return pts.getProperty(key);
     }
 
@@ -56,7 +54,7 @@ public class HttpUtil {
 
 
     public static String sendPost(String url, String query) {
-        Map<String,Object> userparam =  new MapUtil()
+        Map<String, Object> userparam = new MapUtil()
                 .com("env", HttpUtil.getKey("env"))
                 .com("query", query)
                 .map;
