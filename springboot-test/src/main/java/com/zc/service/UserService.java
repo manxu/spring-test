@@ -33,12 +33,22 @@ public class UserService {
             result.put("code", "-2");
             result.put("msg","已存在");
         }else{
+            //查询用户信息
+            Map<String,Object> queryUser =  new MapUtil()
+                    .com("env", HttpUtil.getKey("env"))
+                    .com("query", "db.collection('m_user').where({userId:'"+userId+"'}).get()")
+                    .map;
+            String user = HttpUtil.sendPost(HttpUtil.QUERY, queryUser);
+            JSONObject userJson = JSONObject.parseObject(user);
+
             String addOrder = "db.collection('m_order').add({data:{" +
                     "no:'"+ no +"', " +
                     "amount:"+amount+"," +
                     "fl:"+ fl +"," +
-                    "userId:'"+ userId +"', " +
-                    "noTime:'"+ noTime +"'" +
+                    "userId:'"+ userId +"'," +
+                    "noTime:'"+ noTime +"'," +
+                    "noTime:'"+ noTime +"'," +
+                    "_openid:'"+ JSONObject.parseObject(userJson.getJSONArray("data").getString(0)).getString("_openid") +"'" +
                     "}})";
             Map<String,Object> inparam =  new MapUtil()
                     .com("env", HttpUtil.getKey("env"))
@@ -47,6 +57,7 @@ public class UserService {
             result.put("code", "0");
             result.put("msg","新增");
             result.put("fl", fl);
+            result.put("yue", JSONObject.parseObject(userJson.getJSONArray("data").getString(0)).get("yue"));
             String inOrder = HttpUtil.sendPost(HttpUtil.ADD, inparam);
             JSONObject inOrderJson = JSONObject.parseObject(inOrder);
             if(inOrderJson.getString("errcode").equals("0")){

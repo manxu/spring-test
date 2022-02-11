@@ -7,14 +7,8 @@
     <title>Insert title here</title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <style>
-        table, td, th {
-            border: 1px solid black;
-        }
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+
 
         th {
             height: 70px;
@@ -36,7 +30,7 @@
                 contentType : false,
                 success : function(data) {
                     for(var i in data){
-                        $("#imdiv").append(JSON.stringify(data[i]));
+                        $("#imdiv").append(JSON.stringify(data[i])).append('</br>');
                     }
                 }
             });
@@ -74,11 +68,42 @@
             });
         }
     </script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 
 </head>
 <body>
+<div id="app">
+    <template>
+        <el-table :data="tableData.filter(data => !search || data.name.toLowerCase().includes(search.toLowerCase()))" style="width: 100%"  :fit='true'>
+            <el-table-column type="index" width="50">
+            </el-table-column>
+            <el-table-column prop="date" label="表名" width="180">
+            <el-table-column :prop="index" :label="item" sortable show-overflow-tooltip v-for="(item, index) in tableHeader"
+                             :key="index">
 
-
+            </el-table-column>
+            <el-table-column
+                    align="right">
+                <template slot="header" slot-scope="scope">
+                    <el-input
+                            v-model="search"
+                            size="mini"
+                            placeholder="输入关键字搜索"/>
+                </template>
+                <template slot-scope="scope">
+                    <el-button
+                            size="mini"
+                            @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
+                    <el-button
+                            size="mini"
+                            type="danger"
+                            @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+    </template>
+</div>
 <form id="form" autocomplete="off" class="form-horizontal" role="form"  action="upload" enctype="multipart/form-data">
 导入数据： <input type="file" name="file"><input type="button" value="提交" onclick="upload()"/>
 </form>
@@ -113,4 +138,66 @@
 <hr />
 <button type="button" onclick="init()">初始化用户</button>
 </body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    var Main = {
+        data() {
+            return {
+                tableHeader: {
+                    date: "表名"
+                },
+                tableData: [{
+                    date: '2016-05-02',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-04',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1517 弄'
+                }, {
+                    date: '2016-05-01',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1519 弄'
+                }, {
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1516 弄'
+                }]
+            }
+        }
+    }
+    var De = {
+        data() {
+            return {
+                tableHeader: {
+                    date: "表名",
+                    name: "姓名",
+                    address: "地址",
+                },
+                tableData: [{
+                    date: '2016-05-02',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄'
+                }, {
+                    date: '2016-05-04',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1517 弄'
+                }, {
+                    date: '2016-05-01',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1519 弄'
+                }, {
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1516 弄'
+                }]
+            }
+        }
+    }
+    var Ctor = Vue.extend(Main)
+    new Ctor().$mount('#app')
+</script>
 </html>
