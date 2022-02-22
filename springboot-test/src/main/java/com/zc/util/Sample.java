@@ -23,7 +23,7 @@ public class Sample {
     public static final String SECRET_KEY = "UkZgNywi3QIBWSUWusGOpk1amr7ICj8q";
 
     /**
-     * qinggan
+     * 情感分析
      * @param content
      * @return
      */
@@ -45,7 +45,7 @@ public class Sample {
     }
 
     /**
-     * duihua
+     * 对话分析
      * @param content
      * @return
      */

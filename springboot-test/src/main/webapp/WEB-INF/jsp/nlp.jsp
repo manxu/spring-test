@@ -76,6 +76,15 @@ duihua
 </div>
 
 
+
+<div style="width: 50%">
+    <form id="form" autocomplete="off" enctype="multipart/form-data">
+    上传： <input type="file" name="file" id = "file">
+        <input type="button" value="tixxx" onclick="up()">
+    </form>
+
+</div>
+
 </body>
 <script>
 
@@ -127,5 +136,18 @@ duihua
         });
     }
 
+    function up(){
+        $.ajax({
+            url : '/upload',
+            type : 'POST',
+            cache : false,
+            data : new FormData($('#form')[0]),
+            processData : false,
+            contentType : false,
+            success : function(result) {
+                alert(result)
+            }
+        });
+    }
 </script>
 </html>
