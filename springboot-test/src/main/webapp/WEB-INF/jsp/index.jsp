@@ -157,11 +157,11 @@ skip <input type="text" value="0" id="skip">
 
 </body>
 <!-- import Vue before Element -->
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script>
-    va
+
 </script>
 <script>
     var xx = {};

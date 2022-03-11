@@ -15,7 +15,7 @@ import com.zc.model.Red;
  * @Author zc
  */
 @Configuration
-@Import({Red.class, MyImportSelector.class})
+@Import({Red.class, MyImportSelector.class}) //还有一个 ImportBeanDefinitionRegistrar
 @EnableScheduling
 public class AppConfig {
 

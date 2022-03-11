@@ -17,6 +17,7 @@
         <module>springboot-test</module>
         <module>spring-origin</module>
         <module>wm-admin</module>
+        <module>start-spring-test</module>
     </modules>
 
 
