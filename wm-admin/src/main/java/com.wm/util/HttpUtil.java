@@ -29,6 +29,8 @@ public class HttpUtil {
     public static String UPDATE = "https://api.weixin.qq.com/tcb/databaseupdate?access_token=" + HttpUtil.token;
     public static String ADD = "https://api.weixin.qq.com/tcb/databaseadd?access_token=" + HttpUtil.token;
     public static String DEL = "https://api.weixin.qq.com/tcb/databasedelete?access_token=" + HttpUtil.token;
+    public static String SUB = "https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=" + HttpUtil.token;
+
 
     public static String getKey(String key) {
         return pts.getProperty(key);
