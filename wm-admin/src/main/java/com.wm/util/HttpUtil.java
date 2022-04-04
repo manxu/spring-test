@@ -2,6 +2,7 @@ package com.wm.util;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.wm.dto.PageReq;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -26,6 +27,18 @@ public class HttpUtil {
 
 
     public static String QUERY = "https://api.weixin.qq.com/tcb/databasequery?access_token=" + HttpUtil.token;
+    public static Map<String, Object> getQueryStr(String table, PageReq req){
+        if(req.getPage() == null) {
+            req.setPage(1);
+        }
+        Map<String, Object> param = new MapUtil()
+                .com("env", HttpUtil.getKey("env"))
+                .com("query", "db.collection('m_user').where(" + ComUtil.toJSONString(req.getForm()) + ").limit("+ req.getLimit() +").skip(" + (req.getPage()-1)*req.getLimit() + ").get()")
+                .map;
+        return param;
+    }
+
+
     public static String UPDATE = "https://api.weixin.qq.com/tcb/databaseupdate?access_token=" + HttpUtil.token;
     public static String ADD = "https://api.weixin.qq.com/tcb/databaseadd?access_token=" + HttpUtil.token;
     public static String DEL = "https://api.weixin.qq.com/tcb/databasedelete?access_token=" + HttpUtil.token;
