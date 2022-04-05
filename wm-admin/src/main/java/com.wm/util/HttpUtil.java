@@ -33,7 +33,7 @@ public class HttpUtil {
         }
         Map<String, Object> param = new MapUtil()
                 .com("env", HttpUtil.getKey("env"))
-                .com("query", "db.collection('m_user').where(" + ComUtil.toJSONString(req.getForm()) + ").limit("+ req.getLimit() +").skip(" + (req.getPage()-1)*req.getLimit() + ").get()")
+                .com("query", "db.collection('"+table +"').where(" + ComUtil.toJSONString(req.getForm()) + ").limit("+ req.getLimit() +").skip(" + (req.getPage()-1)*req.getLimit() + ").get()")
                 .map;
         return param;
     }

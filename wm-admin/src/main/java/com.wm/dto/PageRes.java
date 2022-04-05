@@ -9,7 +9,7 @@ import java.util.List;
 public class PageRes {
 
     private Integer code;
-    private String msg;
+    private String message;
     private Result data;
 
     @Data

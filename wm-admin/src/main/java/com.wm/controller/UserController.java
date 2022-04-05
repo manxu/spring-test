@@ -120,7 +120,7 @@ public class UserController {
                 String no = row.getCell(13).getStringCellValue();
                 String userId = "mm_31111125_" + row.getCell(33).getStringCellValue() + "_" + row.getCell(35).getStringCellValue();
                 String amount = row.getCell(18).getStringCellValue();
-                results.add(userService.handlerOrder(userId, no, amount, noTime, null));
+                results.add(userService.handlerOrder(userId, no, amount, noTime, null, "返利"));
             }
         } catch (Exception e) {
             logger.error("", e);
@@ -196,7 +196,7 @@ public class UserController {
             String userId = request.getParameter("userId");
             String amount = request.getParameter("amount");
             String fl = request.getParameter("fl");
-            return userService.handlerOrder(userId, no, amount, noTime, fl);
+            return userService.handlerOrder(userId, no, amount, noTime, fl, "返利");
         } catch (Exception e) {
             logger.error("", e);
         }

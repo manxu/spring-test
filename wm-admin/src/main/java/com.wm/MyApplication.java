@@ -26,6 +26,7 @@ public class MyApplication {
         corsConfiguration.addAllowedMethod(HttpMethod.POST); // 允许哪些类型请求，可以*
         corsConfiguration.addExposedHeader("my-header");//自定义请求头
         corsConfiguration.setAllowCredentials(true);//是否允许携带cookie
+        corsConfiguration.setMaxAge(3600L);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfiguration); // 哪些path的接口可以被跨域请求
         return new CorsFilter(source);

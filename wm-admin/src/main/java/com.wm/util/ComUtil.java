@@ -24,7 +24,7 @@ public class ComUtil {
         JSONObject c = JSON.parseObject(s);
         Integer code = c.getInteger("errcode");
         res.setCode(code==0?20000:code);
-        res.setMsg(c.getString("errmsg"));
+        res.setMessage(c.getString("errmsg"));
 
         if(code == 0) {
 

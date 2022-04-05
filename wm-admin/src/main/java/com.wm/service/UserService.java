@@ -18,7 +18,7 @@ public class UserService {
 
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
-    public Map<String, Object> handlerOrder(String userId, String no, String amount, String noTime,String fl) throws Exception {
+    public Map<String, Object> handlerOrder(String userId, String no, String amount, String noTime,String fl, String source) throws Exception {
         if(fl == null || "".equals(fl)){
             fl = new BigDecimal(amount).multiply(new BigDecimal("3")).setScale(0, RoundingMode.DOWN).toPlainString();
         }
@@ -37,7 +37,7 @@ public class UserService {
         final int exist = orderJson.getJSONArray("data").size();
         if (exist > 0) {
             result.put("code", "-2");
-            result.put("msg", "已存在");
+            result.put("message", "已存在");
         } else {
 
             //查询用户信息
@@ -60,20 +60,15 @@ public class UserService {
                     .com("env", HttpUtil.getKey("env"))
                     .com("query", addOrder)
                     .map;
-            result.put("code", "0");
-            result.put("msg", "新增");
             result.put("fl", fl);
             result.put("yue", userData.get("yue"));
             String inOrder = HttpUtil.sendPost(HttpUtil.ADD, inparam);
-            JSONObject inOrderJson = JSONObject.parseObject(inOrder);
-            if (inOrderJson.getString("errcode").equals("0")) {
+            JSONObject wxback = JSONObject.parseObject(inOrder);
+            if (wxback.getString("errcode").equals("0")) {
                 String userUpdate = "db.collection('m_user').where({userId:'" + userId + "'}).update({data:{subscribe_flg:0,yue:_.inc(" + fl + "), zuori:_.inc(" + fl + ")}})";
                 String updateUserResult = HttpUtil.sendPost(HttpUtil.UPDATE, userUpdate);
-                JSONObject updateUserResultJson = JSONObject.parseObject(updateUserResult);
-                if (updateUserResultJson.getString("errcode").equals("0")) {
-                    result.put("code", "1");
-                    result.put("msg", "更新user");
-
+                wxback = JSONObject.parseObject(updateUserResult);
+                if (wxback.getString("errcode").equals("0")) {
                     //发布订阅消息
                     Integer flag = userData.getInteger("subscribe_flg");
                     if(1== flag) {
@@ -92,7 +87,7 @@ public class UserService {
                         subMC.put("amount3", x3);
 
                         Map<String,Object> x7 = new HashMap<>();
-                        x7.put("value","返利"); //只能用中文
+                        x7.put("value",source); //只能用中文
                         subMC.put("phrase7", x7);
 
                         Map<String,Object> x5 = new HashMap<>();
@@ -101,17 +96,22 @@ public class UserService {
                         subM.put("data", subMC);
                         subM.put("template_id", "ADRRfkWm8wOxbFh_3xDTSxC7RKz9yxP5AN391cEOOSc");
                         String s = HttpUtil.sendPost(HttpUtil.SUB, subM);
-                        if(!"0".equals(JSON.parseObject(s).getInteger("errcode"))){
+                        wxback = JSON.parseObject(s);
+                        if(!"0".equals(wxback.getInteger("errcode"))){
                             logger.error("消息发送失败", JSON.toJSONString(subMC));
-                        }else {
-                            logger.info("消息发送成功", JSON.toJSONString(subMC));
                         }
+                    } else {
+                        logger.info("message", "未订阅,不发送消息");
                     }
 
 
                 }
             }
+            Integer code = wxback.getInteger("errcode");
+            result.put("code", code==0?20000:code);
+            result.put("message", wxback.getString("errmsg"));
         }
+
         return result;
     }
 
