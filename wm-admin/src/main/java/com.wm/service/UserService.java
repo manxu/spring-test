@@ -63,11 +63,13 @@ public class UserService {
             result.put("fl", fl);
             result.put("yue", userData.get("yue"));
             String inOrder = HttpUtil.sendPost(HttpUtil.ADD, inparam);
+            logger.info("addOrder:{}" , inOrder);
             JSONObject wxback = JSONObject.parseObject(inOrder);
             if (wxback.getString("errcode").equals("0")) {
                 String userUpdate = "db.collection('m_user').where({userId:'" + userId + "'}).update({data:{subscribe_flg:0,yue:_.inc(" + fl + "), zuori:_.inc(" + fl + ")}})";
                 String updateUserResult = HttpUtil.sendPost(HttpUtil.UPDATE, userUpdate);
                 wxback = JSONObject.parseObject(updateUserResult);
+                logger.info("update yue:{}", updateUserResult);
                 if (wxback.getString("errcode").equals("0")) {
                     //发布订阅消息
                     Integer flag = userData.getInteger("subscribe_flg");
@@ -99,6 +101,8 @@ public class UserService {
                         wxback = JSON.parseObject(s);
                         if(!"0".equals(wxback.getInteger("errcode"))){
                             logger.error("消息发送失败", JSON.toJSONString(subMC));
+                        } else {
+                            logger.info("发送消息：{}", s);
                         }
                     } else {
                         logger.info("message", "未订阅,不发送消息");

@@ -27,13 +27,17 @@ public class HttpUtil {
 
 
     public static String QUERY = "https://api.weixin.qq.com/tcb/databasequery?access_token=" + HttpUtil.token;
-    public static Map<String, Object> getQueryStr(String table, PageReq req){
+    public static Map<String, Object> getQueryStr(String table, PageReq req, String[] order){
         if(req.getPage() == null) {
             req.setPage(1);
         }
+        String orderStr = "";
+        if(order != null) {
+            orderStr = ".orderBy('"+ order[0] +"', '"+ order[1] +"')";
+        }
         Map<String, Object> param = new MapUtil()
                 .com("env", HttpUtil.getKey("env"))
-                .com("query", "db.collection('"+table +"').where(" + ComUtil.toJSONString(req.getForm()) + ").limit("+ req.getLimit() +").skip(" + (req.getPage()-1)*req.getLimit() + ").get()")
+                .com("query", "db.collection('"+table +"').where(" + ComUtil.toJSONString(req.getForm()) + ")"+ orderStr +".limit("+ req.getLimit() +").skip(" + (req.getPage()-1)*req.getLimit() + ").get()")
                 .map;
         return param;
     }

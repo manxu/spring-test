@@ -28,7 +28,7 @@ public class LogController {
     @RequestMapping("/list")
     @ResponseBody
     public Object list(@RequestBody PageReq<Map<String,Object>> req) {
-        String s = HttpUtil.sendPost(HttpUtil.QUERY, HttpUtil.getQueryStr("login_log", req));
+        String s = HttpUtil.sendPost(HttpUtil.QUERY, HttpUtil.getQueryStr("login_log", req, new String[]{"time", "desc"}));
         return ComUtil.convertRes(s);
     }
 

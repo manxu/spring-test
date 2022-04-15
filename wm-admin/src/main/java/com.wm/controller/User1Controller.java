@@ -23,7 +23,7 @@ public class User1Controller {
     @RequestMapping("/list")
     @ResponseBody
     public Object list(@RequestBody PageReq<Map<String,Object>> req) {
-        String s = HttpUtil.sendPost(HttpUtil.QUERY, HttpUtil.getQueryStr("m_user", req));
+        String s = HttpUtil.sendPost(HttpUtil.QUERY, HttpUtil.getQueryStr("m_user", req, null));
         return ComUtil.convertRes(s);
     }
 
