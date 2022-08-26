@@ -81,5 +81,25 @@
         </dependency>
 
     </dependencies>
-
+    <build>
+        <plugins>
+            <!--SpringBoot maven插件 可以将应用打成一个可执行的jar包, 注意指定mainClass 和 repackage-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.1.2.RELEASE</version>
+                <configuration>
+                    <mainClass>com.wm.MyApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
