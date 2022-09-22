@@ -5,10 +5,13 @@ import java.util.Arrays;
 public class OrderTest {
 
     public static void main(String[] args) {
-        int[] or = new int[]{10, 18 , 14, 25, 9 , 38 , 20 , 17};
+        int[] or = new int[]{10, 18 , 14, 25, 9 , 38 , 20 , 17, 24, 18};
         bubble(or);
         insert(or);
+        fast(or);
     }
+
+
 
     /**
      * 冒泡排序：1. 依次比较相邻的元素，找出其中大的并通过交换放到最后，
@@ -64,5 +67,55 @@ public class OrderTest {
     }
 
 
+    /**
+     * 快速排序：时间最大n2 , 最小nlogn
+     * 1. 取元素为基准数(基数不占用数组)，
+     * 2. 分别从后找出比基准小的，从前找出比基准大的，然后交换这两个元素
+     * 3. 重复步骤2 ，直到从后和从前相遇，将基准和该位置交换。
+     * 4. 已上述的基准为 两个 子  数组 重复步骤1,2,3 直至子数组元素为1.
+     * 总结： 与基数比较，将右边较小的和左边较大的交换，行程两个子数组，重复以上步骤。
+     */
+    private static void fast(int[] pa) {
+        final int[] or = Arrays.copyOf(pa, pa.length);
+
+        int mid, i =0, j = or.length-1; //中，左右开始
+        fast(or, i, j);
+        System.out.println("快速排序" + Arrays.toString(or));
+
+    }
+
+    private static void fast(int[] or, int i, int j) {
+        if (i < j) {
+            int mid = getMid(or, i, j);
+            fast(or, i, mid);
+            fast(or, mid + 1, j);
+        }
+    }
+
+
+    private static int getMid(int[] or, int i, int j) {
+        int base =  or[i];
+        int baseIn = i;
+        while (i < j) {
+            while (j>i && base <= or[j]) {
+                j--;
+            }
+            while (i<j && or[i] <= base) {
+                i++;
+            }
+            //找到较小和较大的下标，交换
+            swap(or, i, j);
+        }
+        //i 就是大小分界. 把基数放到这个分界处
+        swap(or, baseIn, i);
+        return i;
+
+    }
+
+    private static void swap(int[] or , int i , int j) {
+        int temp = or[i];
+        or[i] = or[j];
+        or[j] = temp;
+    }
 
 }
